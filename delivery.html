@@ -7,12 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Leaflet Map API -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <!-- Leaflet Routing Machine -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
-    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <!-- OpenLayers Map API -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@7.5.0/ol.css">
+    <script src="https://cdn.jsdelivr.net/npm/ol@7.5.0/dist/ol.js"></script>
     <!-- GSAP Animation Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -34,7 +31,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <h1>Cleverique<span>Dispatch</span></h1>
+                <a href="index.html"><h1>Cleverique<span>Dispatch</span></h1></a>
             </div>
             <nav class="nav-menu">
                 <ul class="nav-links">
@@ -77,8 +74,8 @@
                     <h2>Delivery Details</h2>
                     <form id="deliveryForm" class="delivery-form">
                         <div class="form-group">
-                            <label for="pickupLocation">Pickup Location</label>
-                            <input type="text" id="pickupLocation" placeholder="Enter pickup address" required>
+                            <label for="pickupLocation">Pickup Location (Your current location)</label>
+                            <input type="text" id="pickupLocation" placeholder="Auto-filled from your GPS" readonly required>
                         </div>
                         
                         <div class="form-group">
@@ -124,7 +121,7 @@
                         </div>
                         
                         <div class="delivery-price">
-                            <p>Estimated Price: <span id="estimatedPrice">$0.00</span></p>
+                            <p>Estimated Price: <span id="estimatedPrice">₦0.00</span></p>
                         </div>
                         
                         <button type="submit" class="btn btn-primary">Schedule Delivery</button>

@@ -5,6 +5,7 @@
     --light-color: #ffffff;
     --gray-color: #f4f4f4;
     --dark-gray: #333333;
+    --green-color: #027e2b;
 }
 
 /* Delivery Page Styles */
@@ -99,7 +100,7 @@
 }
 
 .delivery-price span {
-    color: var(--primary-color);
+    color: var(--green-color);
     font-size: 1.2rem;
 }
 
@@ -234,7 +235,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--secondary-color);
+    background-color: var(--light-color); /* Changed from var(--secondary-color) to white */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -256,7 +257,7 @@ html {
 }
 
 .loader-logo h2 {
-    color: var(--light-color);
+    color: var(--secondary-color); /* Changed from var(--light-color) to black */
     font-size: 2.5rem;
 }
 
@@ -381,6 +382,7 @@ header .container {
 .logo h1 {
     font-size: 1.8rem;
     font-weight: 700;
+    color: var(--secondary-color); /* Set Cleverique to black */
 }
 
 .logo span {
@@ -975,6 +977,17 @@ footer {
     }
 }
 
+/* Mobile Loader Adjustments */
+@media (max-width: 768px) {
+    .loader-logo h2 {
+        font-size: 1.8rem;
+    }
+
+    .loader-bar {
+        width: 150px;
+    }
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
     .hero-content h1 {
@@ -1007,6 +1020,10 @@ footer {
         font-size: 1.5rem;
     }
 
+    .contact-info{
+        padding: 15px;
+    }
+
     .contact-info h2 {
         font-size: 2rem;
     }
@@ -1021,6 +1038,10 @@ footer {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .container{
+        width: 100%;
     }
     
     .hero .container {
@@ -1076,6 +1097,10 @@ footer {
         padding: 10px 25px;
         font-size: 0.9rem;
         min-width: 140px;
+    }
+
+    form .btn-primary{
+        width: 100%;
     }
     
     .stats {
